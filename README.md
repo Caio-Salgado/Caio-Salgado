@@ -1,24 +1,10 @@
-<!-- Opcional: descomente para usar o GIF do nome -->
-<!--
 <p align="center">
   <img src="./assets/ola-caio.gif" alt="Muito prazer, Caio Salgado 👋" />
 </p>
--->
 
-<h1 align="center">
-  Muito prazer, Caio Salgado 👋
-</h1>
-
-<p align="center">
-  Estudante de Ciência da Computação, interessado em automações e desenvolvimento de sistemas
-</p>
-
-<!-- Opcional: descomente para usar o GIF do foguete -->
-<!--
 <p align="center">
   <img src="./assets/rocket.gif" alt="Foguete" width="700" />
 </p>
--->
 
 ---
 
