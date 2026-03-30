@@ -1,9 +1,5 @@
 <p align="center">
-  <img src="./assets/ola-caio.gif" alt="Muito prazer, Caio Salgado 👋" />
-</p>
-
-<p align="center">
-  <img src="./assets/rocket.gif" alt="Foguete" width="700" />
+  <img src="./assets/rocket_welcome_loop.svg" alt="Muito prazer, Caio Salgado" />
 </p>
 
 ---
