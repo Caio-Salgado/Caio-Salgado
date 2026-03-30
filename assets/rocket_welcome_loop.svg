@@ -1,0 +1,150 @@
+<svg width="800" height="260" viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <linearGradient id="trailGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <path id="rocketPath"
+      d="M -80 225
+         C 20 248, 95 230, 155 195
+         S 295 110, 385 95
+         S 575 78, 705 85
+         S 835 92, 890 138" />
+
+    <g id="rocketShape" transform="scale(1)">
+      <path d="M -18 0 C -30 5 -32 17 -20 22 C -22 12 -10 9 -18 0 Z"
+            fill="#9ad7ff" opacity="0.85" filter="url(#softGlow)"/>
+      <g transform="translate(0,0)">
+        <path d="M 18 0
+                 C 12 -18, -2 -34, -24 -38
+                 C -30 -20, -28 8, -16 28
+                 Z"
+              fill="#ffffff"/>
+        <path d="M -24 -38
+                 C -6 -34, 8 -18, 18 0
+                 L -2 2
+                 C -10 -12, -17 -24, -24 -38 Z"
+              fill="#e8eef6" opacity="0.9"/>
+        <circle cx="-8" cy="-12" r="5.5" fill="#0d1117" stroke="#cdd9e5" stroke-width="2"/>
+        <path d="M -8 28 L -19 44 L -5 34 Z" fill="#d6dee8"/>
+        <path d="M 4 18 L 14 31 L 3 25 Z" fill="#d6dee8"/>
+      </g>
+    </g>
+
+    <g id="particle">
+      <circle r="2" fill="#ffffff"/>
+    </g>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#0d1117"/>
+
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <text x="400" y="76" font-size="38" fill="#e6edf3" font-weight="300">Muito prazer,</text>
+    <text x="400" y="124" font-size="42" fill="#ffffff" font-weight="700">Caio Salgado</text>
+
+    <g transform="translate(600,108)">
+      <text x="0" y="0" font-size="34">👋
+        <animateTransform attributeName="transform"
+          type="rotate"
+          values="0 0 0; 16 0 0; -8 0 0; 14 0 0; -5 0 0; 10 0 0; 0 0 0"
+          keyTimes="0;0.14;0.28;0.42;0.58;0.74;1"
+          dur="1.5s"
+          repeatCount="indefinite"/>
+      </text>
+    </g>
+  </g>
+
+  <g opacity="0.65">
+    <circle cx="36" cy="206" r="1.1" fill="#fff"/>
+    <circle cx="82" cy="191" r="1.7" fill="#fff"/>
+    <circle cx="152" cy="197" r="1.2" fill="#fff"/>
+    <circle cx="202" cy="182" r="1.5" fill="#fff"/>
+    <circle cx="93" cy="220" r="1" fill="#fff"/>
+    <circle cx="249" cy="209" r="1.4" fill="#fff"/>
+    <circle cx="324" cy="214" r="1.1" fill="#fff"/>
+    <circle cx="670" cy="55" r="1" fill="#fff" opacity="0.35"/>
+    <circle cx="735" cy="74" r="1.2" fill="#fff" opacity="0.25"/>
+  </g>
+
+  <g opacity="0.95">
+    <path d="M -80 225
+             C 20 248, 95 230, 155 195
+             S 295 110, 385 95
+             S 575 78, 705 85
+             S 835 92, 890 138"
+          fill="none" stroke="#ffffff" stroke-width="2.25" stroke-linecap="round"
+          stroke="url(#trailGradient)" opacity="0.16"/>
+    <path d="M -80 225
+             C 20 248, 95 230, 155 195
+             S 295 110, 385 95
+             S 575 78, 705 85
+             S 835 92, 890 138"
+          fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"
+          stroke-dasharray="0 1200"
+          opacity="0.8">
+      <animate attributeName="stroke-dasharray"
+               values="0 1200; 180 1020; 220 980; 220 980"
+               keyTimes="0;0.5;0.88;1"
+               dur="4.8s"
+               repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset"
+               values="0;-40;-70;-70"
+               keyTimes="0;0.5;0.88;1"
+               dur="4.8s"
+               repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <g opacity="0.95">
+    <use href="#particle">
+      <animateMotion dur="4.8s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#rocketPath"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0;0.7;0" keyTimes="0;0.2;1" dur="4.8s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="-26 10;-34 14;-42 18" dur="4.8s" repeatCount="indefinite"/>
+    </use>
+    <use href="#particle">
+      <animateMotion dur="4.8s" begin="-0.25s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#rocketPath"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0;0.55;0" keyTimes="0;0.25;1" dur="4.8s" begin="-0.25s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="-20 16;-30 20;-38 24" dur="4.8s" begin="-0.25s" repeatCount="indefinite"/>
+    </use>
+    <use href="#particle">
+      <animateMotion dur="4.8s" begin="-0.45s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#rocketPath"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0;0.45;0" keyTimes="0;0.2;1" dur="4.8s" begin="-0.45s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="-32 4;-42 8;-52 10" dur="4.8s" begin="-0.45s" repeatCount="indefinite"/>
+    </use>
+    <use href="#particle">
+      <animateMotion dur="4.8s" begin="-0.65s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#rocketPath"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0;0.35;0" keyTimes="0;0.18;1" dur="4.8s" begin="-0.65s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="-24 -6;-34 -8;-44 -10" dur="4.8s" begin="-0.65s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <g>
+    <g>
+      <animateMotion dur="4.8s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#rocketPath"/>
+      </animateMotion>
+      <use href="#rocketShape"/>
+    </g>
+  </g>
+</svg>
